@@ -1,0 +1,69 @@
+@use "../../style/vars" as vars;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6px 12px;
+  height: 32px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: vars.$whiteColor;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button svg {
+  fill: vars.$svgColor;
+}
+
+.button.primary {
+  justify-content: center;
+  background-color: vars.$btnBackground;
+  color: vars.$whiteColor;
+}
+
+.button.outline {
+  justify-content: center;
+  border: 1px solid vars.$borderColor;
+  color: vars.$btnOutlineTextColor;
+}
+
+.button.menu {
+  border: 1px solid vars.$borderColor;
+  outline: none;
+  justify-content: center;
+  padding: 6px;
+  width: 32px;
+}
+
+.button.onlyIcon {
+  outline: none;
+  justify-content: center;
+  padding: 6px;
+  width: 32px;
+}
+
+.icon {
+  display: flex;
+}
+
+.button:disabled {
+  background-color: vars.$disabledBtnColor;
+  color: vars.$disabledBtnText;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.button:disabled svg {
+  fill: vars.$disabledBtnText;
+}
+
+.button:hover {
+  background-color: vars.$borderColor;
+  color: vars.$btnOutlineTextColor;
+}

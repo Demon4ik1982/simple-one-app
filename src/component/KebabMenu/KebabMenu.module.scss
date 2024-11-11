@@ -1,0 +1,21 @@
+@use "../../style/vars" as vars;
+
+.kebab-menu {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  flex-direction: column;
+  top: 35px;
+  right: 0;
+  width: 190px;
+  z-index: 100;
+  gap: 4px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid vars.$borderColor;
+  background-color: vars.$backgroundColor;
+}
+
+.active {
+  display: flex;
+}

@@ -1,0 +1,42 @@
+@use "../../style/vars" as vars;
+
+.submenu {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__info-title {
+    font-family: vars.$second-family;
+    font-weight: 400;
+    font-size: 20px;
+    color: vars.$btnOutlineTextColor;
+  }
+
+  &__info-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__edit {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .submenu {
+    &__info {
+      flex: 1;
+      justify-content: space-between;
+    }
+  }
+}

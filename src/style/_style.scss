@@ -1,0 +1,81 @@
+@use "./vars" as vars;
+@use "./mixins" as mixin;
+
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../asset/fonts/open-sans-v40-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../asset/fonts/open-sans-v40-latin-600.woff2") format("woff2");
+}
+
+/* montserrat-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../asset/fonts/montserrat-v29-cyrillic_latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../asset/fonts/montserrat-v29-cyrillic_latin-600.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../asset/fonts/inter-v18-cyrillic_latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 320px;
+  font-family: vars.$font-family;
+  background-color: vars.$whiteColor;
+  @include mixin.marginReset();
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 56px 280px minmax(320px, 1584px);
+  grid-template-rows: 1fr;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: calc(100vh - 57px);
+}
+
+.container {
+  max-width: 1920px;
+  @include mixin.makeContainer();
+}
+
+@media(max-width: 991px) {
+  .main {
+    grid-template-columns: 56px minmax(320px, 1000px);
+  }
+}
+
+@media(max-width: 767px) {
+  .main {
+    grid-template-columns: minmax(320px, 1000px);
+  }
+}

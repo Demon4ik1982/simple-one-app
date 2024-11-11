@@ -1,0 +1,31 @@
+@use "../../style/vars" as vars;
+
+.header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid vars.$borderColor;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 577px;
+    width: 100%;
+    gap: 10px;
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 767px) {
+  .header {
+    &__wrapper {
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.sub-task-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 57px);
+}
+
+.sub-menu-wrapper {
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+}
+
+.sub-task-info-wrapper {
+  max-height: calc(1000vh - 57px - 89px);
+  overflow-y: auto;
+}
+
+
+.sub-task-info-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sub-task-info-wrapper::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.sub-task-info-wrapper::-webkit-scrollbar-thumb {
+  background-color: #7f7f7f;
+  border-radius: 4px;
+}
+

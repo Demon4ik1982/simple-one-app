@@ -1,0 +1,16 @@
+@use "../../style/vars" as vars;
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  gap: 8px;
+
+  &__discr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: vars.$btnOutlineTextColor;
+  }
+}

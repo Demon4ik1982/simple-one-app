@@ -1,0 +1,37 @@
+@use "../../style/vars" as vars;
+@use "../../style/mixins" as mixin;
+
+.sub-task-info {
+  padding-right: 16px;
+  padding-left: 16px;
+
+  &__title {
+    @include mixin.marginReset();
+    font-family: vars.$second-family;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    white-space: nowrap; /* Запрещаем перенос текста */
+    overflow: hidden; /* Обрезаем текст, выходящий за границы */
+    text-overflow: ellipsis; /* Добавляем троеточие вместо обрезанного текста */
+    width: 100%;
+    color: vars.$btnOutlineTextColor;
+    margin-bottom: 16px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media(max-width: 991px) {
+  .sub-task-info {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+

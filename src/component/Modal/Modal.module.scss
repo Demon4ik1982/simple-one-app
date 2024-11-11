@@ -1,0 +1,78 @@
+@use "../../style/vars" as vars;
+
+.modal {
+  height: calc(100vh - 32px);
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; // Окно будет начинаться сверху
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  z-index: 1000;
+  padding-top: 16px; // Дополнительный отступ сверху
+  padding-bottom: 16px; // Дополнительный отступ снизу
+  overflow-y: auto; // Поддержка прокрутки для всего окна при переполнении
+
+  &__content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // gap: 40px;
+    max-width: 800px;
+    width: 100%;
+
+    border-radius: 4px;
+    background-color: vars.$whiteColor;
+  }
+
+  &__content-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+  }
+
+  &__content-grid {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 800px) {
+  .modal__content {
+    max-width: 716px;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal {
+    height: 100vh;
+    justify-content: flex-start;
+    padding: 0;
+
+    &__content {
+      border-radius: 0;
+      overflow-y: auto;
+    }
+
+    &__content-grid{
+      padding: 0;
+    }
+  }
+}

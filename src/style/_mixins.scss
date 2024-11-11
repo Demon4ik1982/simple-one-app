@@ -1,0 +1,13 @@
+@mixin makeContainer {
+  padding-right: 16px;
+  padding-left: 16px;
+  margin: 0 auto;
+}
+
+@mixin marginReset {
+  margin: 0;
+  padding: 0;
+}
+
+
+

@@ -1,0 +1,10 @@
+@use "../../style/vars" as vars;
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-right: 1px solid vars.$borderColor;
+  padding-top: 16px;
+  align-items: center;
+}

@@ -1,0 +1,26 @@
+.person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #99d5ff;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #2e3238;
+  background: #e5f4ff;
+
+
+}
+
+@media(max-width: 500px) {
+  .person {
+    &__descr {
+      max-width: 120px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

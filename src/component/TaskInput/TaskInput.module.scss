@@ -1,0 +1,65 @@
+@use "../../style/vars" as vars;
+
+.task-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__discr {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: vars.$btnOutlineTextColor;
+  }
+
+  &__importance {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: vars.$btnOutlineTextColor;
+  }
+
+  &__field {
+    position: relative;
+    border: 1px solid vars.$borderColor;
+    border-radius: 4px;
+    padding: 6px 8px;
+    min-height: 32px;
+    width: 100%;
+    background-color: vars.$backgroundColor;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: vars.$btnOutlineTextColor;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+  }
+
+  &__field-wrapper {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__info-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}
+
+.grid-span {
+  grid-column: 1/ span 2;
+}
+
+@media(max-width: 991px) {
+  .grid-span {
+    grid-column: 1;
+  }
+}
