@@ -1,3 +1,5 @@
+@use "../../style/vars" as vars;
+
 .sub-task-wrapper {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,7 @@
 }
 
 .shadow {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 4px 0 vars.$modalBackground;
 }
 
 .sub-task-info-wrapper {
@@ -23,12 +25,12 @@
 }
 
 .sub-task-info-wrapper::-webkit-scrollbar-track {
-  background-color: #fff;
+  background-color: vars.$whiteColor;
   border-radius: 4px;
 }
 
 .sub-task-info-wrapper::-webkit-scrollbar-thumb {
-  background-color: #7f7f7f;
+  background-color: vars.$scrollThumb;
   border-radius: 4px;
 }
 

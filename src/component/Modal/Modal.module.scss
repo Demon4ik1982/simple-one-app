@@ -3,20 +3,20 @@
 .modal {
   height: calc(100vh - 32px);
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: vars.$modalBackground;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start; // Окно будет начинаться сверху
+  align-items: flex-start;
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
   z-index: 1000;
-  padding-top: 16px; // Дополнительный отступ сверху
-  padding-bottom: 16px; // Дополнительный отступ снизу
-  overflow-y: auto; // Поддержка прокрутки для всего окна при переполнении
+  padding-top: 16px;
+  padding-bottom: 16px;
+  overflow-y: auto;
 
   &__content {
     padding: 16px;
@@ -24,7 +24,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // gap: 40px;
     max-width: 800px;
     width: 100%;
 
